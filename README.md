@@ -21,3 +21,7 @@ This folder contains the data and analysis of our MoQ quality experiments. Here,
 ## MoQ Remote Subscriber
 
 This folder contains a notebook to merge the frame data of the publisher with the frame data of the remote subscriber into a format that can then be used by the scripts within the MoQ Analysis folder.
+
+## Figures
+
+This folder contains the `.drawio` files of our created figures.
