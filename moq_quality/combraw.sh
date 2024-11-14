@@ -11,7 +11,7 @@ for i in {0..479}; do
 done
 
 # Use FFmpeg to convert the combined raw file into a raw video file
-ffmpeg -hide_banner  -f rawvideo -pixel_format rgba -video_size 1280x720 -framerate 24 -i $output ../received_video_delay_500_gop_48.yuv
+ffmpeg -hide_banner  -f rawvideo -pixel_format rgba -video_size 1280x720 -framerate 24 -i $output ../received_video_gop_12_test.yuv
 
 
 # Cleanup the combined raw file
