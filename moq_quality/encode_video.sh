@@ -22,7 +22,7 @@ ffmpeg -s:v $RESOLUTION -pix_fmt $PIX_FMT -f rawvideo -r $FRAME_RATE -i $YUV_FIL
 # Step 3: Encode the next 480 frames with GOP size of 12 (20 seconds bad network)
 ffmpeg -s:v $RESOLUTION -pix_fmt $PIX_FMT -f rawvideo -r $FRAME_RATE -i $YUV_FILE \
     -ss 35 -frames:v 480 -g 12 -c:v libx264 -profile:v high -preset medium -b:v $BITRATE \
-    -x264-params "keyint=24:min-keyint=24" -an segment2.mp4
+    -x264-params "keyint=12:min-keyint=12" -an segment2.mp4
 
 # Step 4: Encode the next 720 frames with GOP size of 48 (20 seconds good network, 10 seconds extra buffer to end stream)
 ffmpeg -s:v $RESOLUTION -pix_fmt $PIX_FMT -f rawvideo -r $FRAME_RATE -i $YUV_FILE \
